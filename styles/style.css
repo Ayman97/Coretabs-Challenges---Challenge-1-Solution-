@@ -189,8 +189,7 @@ form {
 }
 
 .field--error,
-.field--error label,
-.field--error .error-message {
+.field--error label {
     color: #F70C6F;
 }
 
@@ -198,9 +197,11 @@ form {
     border: 2px solid #F70C6F;
 }
 
-.error-message { 
+.field::after{
+    content: attr(data-msg);
+    display: block;
+    color: #F70C6F;
     font-size: 12px;
     padding-left: 16px;
     margin-top: 8px;
 }
-

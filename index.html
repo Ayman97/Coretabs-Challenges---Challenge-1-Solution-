@@ -11,7 +11,7 @@
 </head>
 <body>
     <article class="modal">
-        <section class="modal__info">
+        <div class="modal__info">
             <h1 class="modal__title modal__title--underline">Sign Up</h1>
             <button class="btn btn--secondary" id="google-btn">
                 <img src="images/google-icon.png" alt="google-logo">
@@ -20,30 +20,30 @@
 
             <div id="hr">OR</div>
 
-            <form action="">
+            <form id="form" novalidate>
                 <div class="field">
                     <label for="name">Name</label>
-                    <input placeholder="Elon Musk" class="input" id="name">
+                    <input placeholder="Elon Musk" class="input" id="name" pattern="[A-Za-z]+([\sA-Za-z])*" required>
                 </div>
 
                 <div class="field">
                     <label for="email">Email Address</label>
-                    <input type="email" placeholder="elon_musk@gmail.com" class="input" id="email">
+                    <input type="email" placeholder="elon_musk@gmail.com" class="input" id="email" required>
                 </div>
 
                 <div class="field">
                     <label for="password">Password</label>
-                    <input type="password" placeholder="●●●●●●●●" class="input" id="password">
+                    <input type="password" placeholder="●●●●●●●●" class="input" id="password" required pattern="[a-zA-Z0-9@*#]{6,}">
                 </div>
-
-                <button class="btn btn--primary" id="submit-btn">Sign up</button>
+                
+                <button class="btn btn--primary" type="submit" id="submit-btn">Sign up</button>
             </form>
             <p id="bottom-text">Already have an account? <a href="#">Log in</a></p>
-        </section>
+        </div>
         
-        <section class="modal__background">
+        <div class="modal__background">
             <img src="images/pattern.png" alt="pattern">
-        </section>
+        </div>
     </article>
 </body>
 </html>
